@@ -43,8 +43,6 @@ if matching_character_count == 1:
 
 if matching_character_count > 1:
     print(str(matching_character_count) + " instances of " + entered_character + " found in " + entered_word)
-    
+
 if matching_character_count == 0:
     print("No instances of " + entered_character + " found in " + entered_word)
-
-
