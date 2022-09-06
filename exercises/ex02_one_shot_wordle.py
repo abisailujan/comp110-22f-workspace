@@ -1,4 +1,4 @@
-"""EX02 - One-Shot Wordle - Loops assignment"""
+"""EX02 - One-Shot Wordle - Loops assignment."""
 
 __author__ = "730249754"
 
@@ -38,7 +38,7 @@ while j < len(entered_word):
             if secret_word[alternate_index] == entered_word[j]:
                 elsewhere = True
             alternate_index = alternate_index + 1
-        if elsewhere == True: 
+        if elsewhere: 
             emoji_result = emoji_result + YELLOW_BOX
         else:
             emoji_result = emoji_result + WHITE_BOX
@@ -46,9 +46,10 @@ while j < len(entered_word):
 
 print(emoji_result)
 
-#example terminal code has the following conditionals printed after emoji string
+# example terminal code has the following conditionals printed after emoji string
+
 if entered_word == secret_word:
-        print("Woo! You got it!")
+    print("Woo! You got it!")
 
 if entered_word != secret_word:
     print("Not quite. Play again soon!")
