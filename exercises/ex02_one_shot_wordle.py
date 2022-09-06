@@ -13,7 +13,7 @@ i: int = 0
 # assuring that entered word is the correct length of secret word
 while i < len(secret_word): 
     if len(entered_word) != len(secret_word):
-        entered_word: str = input(f"That was not {secret_word_length} letters! Try again: ")
+        entered_word = input(f"That was not {secret_word_length} letters! Try again: ")
         
     i = i + 1
     
