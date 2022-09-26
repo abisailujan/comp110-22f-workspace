@@ -1,22 +1,16 @@
 """EX04 - List Utility Functions."""
 
-from xmlrpc.client import Boolean
-
 
 author: str = "730249754"
 
 def all(a: list[int], b: int) -> bool:
     """Determines if list is composed of same number as int argument."""
-    assert len(a) > 0
+    assert len(a) >= 1
     i: int = 0 
-    matches: bool = False
     while i < len(a):
-        if a[i] == b:
-            matching = True
-        else:
-           matching = False
+        if a[i] != b:
+            return False
         i += 1
-    return matching
 
 
 def max(a: list[int]) -> int:
@@ -34,12 +28,14 @@ def max(a: list[int]) -> int:
 
 def is_equal(a: list[int], b: list[int]) -> Boolean:
     """Determines if each of lists indicies match."""
-    index_match: bool
     i: int = 0
-    while i < len(a):
-        if a[i] == b[i]:
-             index_match = True
-        else:
-            index_match = False
-        i += 1
-    return index_match
+    if len(a) > len(b):
+        while i < len(a):
+            if a[i] != b[i]:
+                return False
+            i += 1
+    elif len(b) > len(a):
+        while i < len(b):
+            if a[i] != b[i]:
+                return False
+            i += 1
