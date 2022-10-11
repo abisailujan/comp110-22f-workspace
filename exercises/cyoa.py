@@ -2,6 +2,8 @@
 
 __author__ = "730249754"
 
+from random import randint
+
 points: int 
 
 player: str = ""
@@ -11,9 +13,7 @@ MONEY_EMOJI: str = "\U0001F4B0"
 DOOR_EMOJI: str = "\U0001F6AA"
 HOST_EMOJI: str = "\U0001F935"
 WHITE_BOX: str = "\U00002B1C"
-MAN_EMOJI: str ="\U0001F9CD"
-
-from random import randint
+MAN_EMOJI: str = "\U0001F9CD"
 
 stored_questions: list[str] = ["Category: Computer Stuff. \nQuestion: A class in school, or a record of where you've gone in a web browser? ", "Category: Celebrity Sister Surnames. \nQuestion: Britney and Jamie Lynn __? ", "Category: Lets Dance. \nQuestion: It's said that it 'takes two to' do this dance from Buenos Aires? ", "Category: Hunger Aims. \nQuestion: To make a quesadilla, you just need cheese and a ____ to wrap around it? ", "Category: 'V' is for... \nQuesstion: This most popular ice cream flavor? ", "Category: One-word Shout Outs. \nQuestion: What word signifies a freshly cut tree about to fall? ", "Category: In case you're thirsty. \nQuestion: The logo of this sports drink is a capital 'G' with an orange lightening bolt in it ", "Category: Just deserts. \nQuestion: Which desert in North Africa is the largest in the world? ", "Category: Getting Dressed. \nQuestion: What is the name of the slip-on shoes that is also a term for alligator relatives? ", "Category: Outdoors. \nQuestion: A fire ___ is a sidewalk fixture that allows firefighters to tap into the municipal water supply? "]
 stored_answers: list[str] = ["History", "Spears", "Tango", "Tortilla", "Vanilla", "Timber", "Gatorade", "Sahara", "Crocs", "Hrydrant"]
@@ -26,7 +26,7 @@ def main() -> None:
     points = 0
     greet()
     # create function for double jeopardy door and triple jeopardy door, and emergency exit door
-    #create a while loop decrementing down each floor
+    # create a while loop decrementing down each floor
     total_floors: int = 5
     floor: int = 5
     while floor <= total_floors and floor > 0:
@@ -75,7 +75,7 @@ def greet() -> None:
     print(f"{HOST_EMOJI}: Alright then {player}, lets see if you can make a milli. Good luck!")
 
 
-def double_jeop()-> None:
+def double_jeop() -> None:
     """Provides player with Jeopardy question 2x worth wager of their choice."""
     global points
     print(f"\n{HOST_EMOJI}: Awesome {player}, you have chosen the Double Jeopardy Door! Playing boldly is always encouraged.")
@@ -96,7 +96,7 @@ def double_jeop()-> None:
         print(f"\n{HOST_EMOJI}: Sorry {player}, that is not correct! ${double_wager} has been deducted from your bank.")
 
 
-def triple_jeop(game_points: int)-> int:
+def triple_jeop(game_points: int) -> int:
     """Provides player with Jeopardy question 3x worth wager of their choice."""
     print(f"\n{HOST_EMOJI}: Wow {player}, you are shooting for the stars, lets hope you win!")
     money_wagered: int = int(input("First, how much money would you like to wager for this Triple Jeopardy question? $"))
@@ -117,4 +117,4 @@ def triple_jeop(game_points: int)-> int:
 
 
 if __name__ == "__main__":
-  main()
+    main()
