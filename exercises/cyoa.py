@@ -16,7 +16,9 @@ WHITE_BOX: str = "\U00002B1C"
 MAN_EMOJI: str = "\U0001F9CD"
 
 stored_questions: list[str] = ["Category: Computer Stuff. \nQuestion: A class in school, or a record of where you've gone in a web browser? ", "Category: Celebrity Sister Surnames. \nQuestion: Britney and Jamie Lynn __? ", "Category: Lets Dance. \nQuestion: It's said that it 'takes two to' do this dance from Buenos Aires? ", "Category: Hunger Aims. \nQuestion: To make a quesadilla, you just need cheese and a ____ to wrap around it? ", "Category: 'V' is for... \nQuesstion: This most popular ice cream flavor? ", "Category: One-word Shout Outs. \nQuestion: What word signifies a freshly cut tree about to fall? ", "Category: In case you're thirsty. \nQuestion: The logo of this sports drink is a capital 'G' with an orange lightening bolt in it ", "Category: Just deserts. \nQuestion: Which desert in North Africa is the largest in the world? ", "Category: Getting Dressed. \nQuestion: What is the name of the slip-on shoes that is also a term for alligator relatives? ", "Category: Outdoors. \nQuestion: A fire ___ is a sidewalk fixture that allows firefighters to tap into the municipal water supply? "]
+
 stored_answers: list[str] = ["History", "Spears", "Tango", "Tortilla", "Vanilla", "Timber", "Gatorade", "Sahara", "Crocs", "Hrydrant"]
+
 jeop_index: int = randint(0, len(stored_questions) - 1)
 
 
@@ -25,7 +27,6 @@ def main() -> None:
     global points
     points = 0
     greet()
-    # create function for double jeopardy door and triple jeopardy door, and emergency exit door
     # create a while loop decrementing down each floor
     total_floors: int = 5
     floor: int = 5
@@ -82,7 +83,6 @@ def double_jeop() -> None:
     money_wagered: int = int(input(f"{HOST_EMOJI}: First, how much money would you like to wager for this Double Jeopardy question? $"))
     double_wager: int = money_wagered * 2
     print(f"\nTotal money to be wagered: ${double_wager}")
-    
     double_jeop_question: str = stored_questions[jeop_index]
     double_jeop_answer: str = stored_answers[jeop_index]
     entered_answer: str = input(f"{double_jeop_question}\n[CAPITALIZE THE 1st LETTER ONLY]: ")

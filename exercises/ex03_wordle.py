@@ -1,8 +1,5 @@
 """EX03 - Structured Wordle."""
 
-from pyexpat.errors import codes
-
-
 author: str = "730249754"
 
 
