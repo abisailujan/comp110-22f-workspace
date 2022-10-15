@@ -26,7 +26,7 @@ def max(a: list[int]) -> int:
     return maximum
 
 
-def is_equal(a: list[int], b: list[int]) -> Boolean:
+def is_equal(a: list[int], b: list[int]) -> bool:
     """Determines if each of lists indicies match."""
     i: int = 0
     if len(a) > len(b):
