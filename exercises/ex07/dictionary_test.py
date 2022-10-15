@@ -1,17 +1,18 @@
 """Tests for Ex07 Dictionary."""
 
-author: str = "730249754"
-
 import pytest
 
 from exercises.ex07.dictionary import invert, favorite_color, count
+
+author: str = "730249754"
 
 with pytest.raises(KeyError):
     full_names = {'abisai': 'lujan', 'john': 'wayne', 'lil': 'wayne'}
     invert(full_names)
 
+
 def test_invert_letters() -> None:
-    """"Tests if invert switches key and values of the same string but different lengths from a dict passed."""
+    """Tests if invert switches key and values of the same string but different lengths from a dict passed."""
     vowels: dict[str, str] = {'aaaa': 'aa', 'bbbb': 'bb', 'cccc': 'cc'}
     assert invert(vowels) == {'aa': 'aaaa', 'bb': 'bbbb', 'cc': 'cccc'}
 

@@ -2,6 +2,7 @@
 
 __author__: str = "730249754"
 
+
 def invert(dictionary: dict[str, str]) -> dict[str, str]:
     """Reverses the keys and values of a dictionary passed in."""
     inverted_dict: dict[str, str] = {}
@@ -30,20 +31,20 @@ def favorite_color(faves: dict[str, str]) -> str:
     # loop through dictionary again  
     for person in faves: 
         # loop through all_colors list 
-       i: int = 0
-       color_tally: list[str] = []
-       while i < len(all_colors): 
-        # add faves[person] to color_tally each time found in all_colors
+        i: int = 0
+        color_tally: list[str] = []
+        while i < len(all_colors): 
+            # add faves[person] to color_tally each time found in all_colors
             if faves[person] == all_colors[i]: 
                 color_tally.append(faves[person])
             i += 1
-                # let nested loop finish going through all_colors
-      # assign faves[person] best_color depending on length of its color_tally
-       print(color_tally)
-       if len(color_tally) == 1: 
+    # let nested loop finish going through all_colors
+        # assign faves[person] best_color depending on length of its color_tally
+
+        if len(color_tally) == 1: 
             best_color == faves[person]
             length = len(color_tally)
-       if len(color_tally) > length:
+        if len(color_tally) > length:
             best_color = faves[person]
             length = len(color_tally)
     return best_color
